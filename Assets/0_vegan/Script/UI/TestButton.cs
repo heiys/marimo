@@ -1,18 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class TestButton : MonoBehaviour
+public class TestButton : CommonButton
 {
-    // Start is called before the first frame update
-    void Start()
+    override protected void OnClick()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        Debug.Log("test");
+        Debug.Log("Button Clicked");
+        float x = Random.Range(-1.0f, 1.0f);
+        float y = Random.Range(-1.0f, 1.0f);
+        GameObject marimo = GameObject.Find("Marimo");
+        Vector3 movePoint = new(x, y);
+        marimo.transform.position = movePoint;
     }
 }
