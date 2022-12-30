@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
-public class CommonButton : MonoBehaviour
+public class BaseButton: MonoBehaviour
 {
     private void Awake()
     {
